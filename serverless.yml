@@ -1,0 +1,50 @@
+service: lambda-test # NOTE: update this with your service name
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+  stage: dev
+  region: us-east-1
+
+functions:
+  clientToken:
+    handler: handler.clientToken
+    events:
+      - http:
+          path: /clientToken
+          method: post
+  postNonce:
+    handler: handler.postNonce
+    events:
+      - http:
+          path: /postNonce
+          method: post
+  newCustomerPayMethod:
+    handler: handler.newCustomerPayMethod
+    events:
+      - http:
+          path: /newCustomerPayMethod
+          method: post
+  getCustomerPayMethods:
+    handler: handler.getCustomerPayMethods
+    events:
+      - http:
+          path: /getCustomerPayMethods
+          method: post
+  deletePaymentMethod:
+    handler: handler.deletePaymentMethod
+    events:
+      - http:
+          path: /deletePaymentMethod
+          method: post
+  createOrder:
+    handler: handler.createOrder
+    events:
+      - http:
+          path: /createOrder
+          method: post

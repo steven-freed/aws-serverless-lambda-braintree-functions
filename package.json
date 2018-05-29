@@ -1,0 +1,24 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "braintree aws-lambda functions",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steven-freed/aws-serverless-lambda/braintree-functions"
+  },
+  "keywords": [
+    "node",
+    "serverless",
+    "aws",
+    "braintree"
+  ],
+  "author": "Steven Freed",
+  "license": "MIT",
+  "dependencies": {
+    "braintree": "^2.11.0"
+  }
+}
